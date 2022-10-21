@@ -1,0 +1,8 @@
+
+<div class=" list-group">
+
+  <div  class="list-group-item-action " *ngFor=" let item of listeCVs" >
+    <app-item  [cv] ="item" (showDetailsI_L)="onGet($event)"> </app-item>
+  </div>
+
+</div>

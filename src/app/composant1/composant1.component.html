@@ -1,0 +1,17 @@
+
+<div class="container" >
+  <div  [style.backgroundColor]="bgcolor">
+    this a text
+  </div>
+
+  <input
+    class="form-control" placeholder="Select Color"
+    #Inputcolor
+    (change)="changeColor(Inputcolor)"
+    type="text"
+  >
+ <br>
+  <button class="btn btn-outline-primary" (click)="resetColor()">
+    reset Color
+  </button>
+</div>
