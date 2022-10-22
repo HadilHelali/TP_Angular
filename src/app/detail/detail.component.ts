@@ -10,8 +10,10 @@ import {Cv} from "../cv";
 })
 export class DetailComponent implements OnInit {
 
-  @Input() cv: Cv | undefined ;
-  constructor() { }
+  @Input() cv: Cv | null ;
+  constructor() {
+    this.cv = null;
+  }
 
 
   ngOnInit(): void {

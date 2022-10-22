@@ -8,13 +8,15 @@ import {Cv} from "../cv";
 })
 export class CvComponent implements OnInit {
 
-  selected: Cv | undefined;
-  constructor() { }
+  selected: Cv | null;
+  constructor() {
+    this.selected = null ;
+  }
 
   ngOnInit(): void {
   }
 
-  showDetails(value:any) {
+  showDetails(value:Cv) {
     this.selected = value;
   }
 }

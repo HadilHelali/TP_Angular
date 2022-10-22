@@ -10,7 +10,7 @@ export class Exercice2Component implements OnInit {
   Nom = 'Fouleni';
   Prenom = 'Foulen';
   Job = 'travail';
-  Image ='assets/images/tim_logo.png';
+  Image ='tim_logo.png';
   CitationPref = "Citation";
   DescripTravail = "un travail";
   MotsCles = "mots clés";

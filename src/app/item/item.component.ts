@@ -8,19 +8,21 @@ import{Cv} from "../cv";
 })
 export class ItemComponent implements OnInit {
 
-  @Input() cv: Cv | undefined;
+  @Input() cv: Cv | null ;
 
   constructor() {
-
+  this.cv = null;
   }
 
-  @Output() showDetailsI_L = new EventEmitter();
+  @Output() showDetailsI_L = new EventEmitter<Cv>();
 
   ngOnInit(): void {
   }
 
   onClick(){
-    this.showDetailsI_L.emit(this.cv);
-    console.log("done");
+    if(this.cv){
+      this.showDetailsI_L.emit(this.cv);
+    }
+
   }
 }
