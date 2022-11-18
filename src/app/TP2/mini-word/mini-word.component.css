@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Sono";
+  src: local("Sono"), url(src/assets/fonts/Sono-VariableFont_MONO,wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: "DancingScript";
+  src: local("DancingScript"), url(src/assets/fonts/DancingScript-VariableFont_wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: "BhuTuka";
+  src: local("BhuTuka"), url(src/assets/fonts/BhuTukaExpandedOne-Regular.ttf) format("truetype");
+}
+

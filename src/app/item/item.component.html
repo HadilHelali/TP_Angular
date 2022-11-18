@@ -1,4 +1,7 @@
- <div class="row , align-items-center" *ngIf="cv" (click)="onClick()">
+ <div class="row ,align-items-center , rounded ,"
+      *ngIf="cv" (click)="onClick()"
+      [ngClass]=" {bg_change : isSelected} "
+ >
     <div class="col">
       <img class="img-circle" src="assets/images/{{cv.path}}"/>
     </div>

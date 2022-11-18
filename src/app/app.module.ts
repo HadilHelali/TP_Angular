@@ -11,6 +11,8 @@ import { DetailComponent } from './detail/detail.component';
 import { ListeComponent } from './liste/liste.component';
 import { CvComponent } from './cv/cv.component';
 import { ItemComponent } from './item/item.component';
+import { MiniWordComponent } from './TP2/mini-word/mini-word.component';
+import { ArcdirDirective } from './TP2/arcdir.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ItemComponent } from './item/item.component';
     DetailComponent,
     ListeComponent,
     CvComponent,
-    ItemComponent
+    ItemComponent,
+    MiniWordComponent,
+    ArcdirDirective
   ],
   imports: [
     BrowserModule,

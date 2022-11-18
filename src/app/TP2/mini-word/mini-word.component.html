@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <p [ngStyle]="{'color':color ,'font-family':fontFam , 'font-size': fontsize+'px'}" >
+    Text
+  </p>
+  <div class="row ">
+    <div class="col" >
+      <input [(ngModel)]="color"  type="color" class="form-control" />
+    </div>
+    <div class="col">
+      <input  [(ngModel)]="fontsize"  type="number" class = "form-control"  />
+    </div>
+    <div class="col">
+      <select class="form-select" [ngModel]="fontFam" (ngModelChange)="onChange($event)" >
+        <option value="" disabled selected>Select the FontFamily</option>
+        <option *ngFor="let p of options" value="{{p.value}}">{{p.title}}</option>
+      </select>
+    </div>
+
+  </div>
+  <br>
+
+  <div class="row">
+  <div class="input-group input-group-sm mb-1">
+
+    <input appArcdir class="form-control" aria-label="Arc en ciel text" aria-describedby="inputGroup-sizing-sm">
+  </div>
+</div>
+
+</div>
+
