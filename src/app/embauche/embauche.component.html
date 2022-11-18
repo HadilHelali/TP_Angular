@@ -1,0 +1,6 @@
+<div class=" list-group" *ngIf = "List.length > 0">
+  <p class="h3"> Liste des embauches </p>
+  <div  class="list-group-item-action " *ngFor=" let item of List" >
+    <app-item  [cv] ="item" > </app-item>
+  </div>
+</div>

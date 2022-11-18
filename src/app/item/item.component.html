@@ -1,9 +1,9 @@
- <div class="row ,align-items-center , rounded ,"
+ <div appChangeColor
+   class="row ,align-items-center , rounded ,"
       *ngIf="cv" (click)="onClick()"
-      [ngClass]=" {bg_change : isSelected} "
  >
     <div class="col">
-      <img class="img-circle" src="assets/images/{{cv.path}}"/>
+      <img class="img-circle" src="assets/images/{{cv.path | defaultImage }}"/>
     </div>
     <div class="col">
       {{cv.name}} {{cv.firstname}}

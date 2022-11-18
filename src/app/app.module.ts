@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { Composant1Component } from './composant1/composant1.component';
 import { Exercice2Component } from './exercice2/exercice2.component';
@@ -13,6 +13,9 @@ import { CvComponent } from './cv/cv.component';
 import { ItemComponent } from './item/item.component';
 import { MiniWordComponent } from './TP2/mini-word/mini-word.component';
 import { ArcdirDirective } from './TP2/arcdir.directive';
+import { ChangeColorDirective } from './change-color.directive';
+import { DefaultImagePipe } from './default-image.pipe';
+import { EmbaucheComponent } from './embauche/embauche.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,15 @@ import { ArcdirDirective } from './TP2/arcdir.directive';
     CvComponent,
     ItemComponent,
     MiniWordComponent,
-    ArcdirDirective
+    ArcdirDirective,
+    ChangeColorDirective,
+    DefaultImagePipe,
+    EmbaucheComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,8 @@
 import { Component, OnInit ,Input } from '@angular/core';
 import {Cv} from "../cv";
+import {EmbaucheService} from "../services/embauche/embauche.service";
+import { ToastrService } from 'ngx-toastr';
+
 
 
 
@@ -11,7 +14,8 @@ import {Cv} from "../cv";
 export class DetailComponent implements OnInit {
 
   @Input() cv: Cv | null ;
-  constructor() {
+
+  constructor(private embaucheService: EmbaucheService,private toastr: ToastrService) {
     this.cv = null;
   }
 
@@ -20,4 +24,12 @@ export class DetailComponent implements OnInit {
 
   }
 
+  onClick($event: MouseEvent) {
+    if(this.embaucheService.getList().includes(<Cv>this.cv)){
+      this.toastr.info('Candidat '+this.cv?.firstname+' '+this.cv?.name+' déja embauché !', 'Embauche');
+    } else {
+      this.toastr.success('Candidat '+this.cv?.firstname+' '+this.cv?.name+' embauché !', 'Embauche');
+      this.embaucheService.add(this.cv);
+    }
+  }
 }

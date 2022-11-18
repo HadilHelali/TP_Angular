@@ -6,18 +6,24 @@
     </div>
     <!--image-->
     <div class="user">
-      <img class="img-circle" src="assets/images/{{cv.path}}"/>
+      <img class="img-circle" src="assets/images/{{cv.path | defaultImage }}"/>
     </div>
     <div class="content">
       <div class="main">
         <!-- nom prénom  -->
-        <h3 class="name">{{cv.name}} {{cv.firstname}}</h3>
+        <h3 class="name"
+            appChangeColor>{{cv.name}} {{cv.firstname}}</h3>
         <!--profession-->
-        <p class="profession">{{cv.job}}</p>
+        <p appChangeColor class="profession">{{cv.job}}</p>
         <!-- cin -->
-        <p class="text-center">{{cv.CIN}}</p>
+        <p appChangeColor
+           class="text-center">{{cv.CIN}}</p>
       </div>
-
+      <div style="text-align: center;">
+      <button type="button" class="btn btn-outline-info" (click)="onClick($event)">
+        Embaucher
+      </button>
+      </div>
     </div>
   </div>
 </div>

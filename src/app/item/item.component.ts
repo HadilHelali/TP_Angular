@@ -14,7 +14,6 @@ export class ItemComponent implements OnInit {
   this.cv = null;
   }
 
-  public isSelected : boolean = false ;
 
   //type narrowing
   @Output() showDetailsI_L = new EventEmitter<Cv>();
@@ -23,7 +22,6 @@ export class ItemComponent implements OnInit {
   }
 
   onClick(){
-    this.isSelected= true;
     if(this.cv){
       this.showDetailsI_L.emit(this.cv);
     }
