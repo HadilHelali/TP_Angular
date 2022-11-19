@@ -37,7 +37,11 @@ import { EmbaucheComponent } from './embauche/embauche.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(
+      {
+        preventDuplicates: true
+      }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

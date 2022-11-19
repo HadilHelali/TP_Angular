@@ -11,3 +11,7 @@
   src: local("BhuTuka"), url(src/assets/fonts/BhuTukaExpandedOne-Regular.ttf) format("truetype");
 }
 
+.borderbold{
+  border: 3px #eaeaea solid;
+}
+

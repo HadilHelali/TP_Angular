@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Cv} from "../../cv";
 
 @Injectable({
@@ -6,16 +6,20 @@ import {Cv} from "../../cv";
 })
 export class EmbaucheService {
 
-  listeEmbacuhes :Cv[] =[];
-  constructor() { }
+  listeEmbacuhes: Cv[] = [];
 
-  add(cv: Cv | null ) {
-    if (cv) {
-      this.listeEmbacuhes.push(cv);
-    }
+  constructor() {
   }
 
-  getList() : Cv[] {
+  add(cv: Cv | null):boolean {
+    if (cv && !this.listeEmbacuhes.includes(cv)) {
+      this.listeEmbacuhes.push(cv);
+      return true
+    }
+    return false
+  }
+
+  getList(): Cv[] {
     return this.listeEmbacuhes;
   }
 }

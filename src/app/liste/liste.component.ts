@@ -11,14 +11,7 @@ export class ListeComponent implements OnInit {
 
   listeCVs :Cv[] = [];
 
-  constructor(private cvService : CvService) {
-    /*this.listeCVs =[
-      new Cv("helali","hadil",22,12456789,"student","hadil_Image.jpg"),
-      new Cv("trimech","raoua",22,987654321,"student","raoua_Image.jpg"),
-      new Cv("helali","hadil",22,12456789,"student","      "),
-      new Cv("trimech","raoua",22,987654321,"student",""),
-    ];*/
-  }
+  constructor(private cvService : CvService) {}
 
   @Output() showDetailsL_CV = new EventEmitter<Cv>();
   ngOnInit(): void {

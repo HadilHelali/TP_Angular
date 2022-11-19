@@ -24,12 +24,11 @@ export class DetailComponent implements OnInit {
 
   }
 
-  onClick($event: MouseEvent) {
-    if(this.embaucheService.getList().includes(<Cv>this.cv)){
+  onClick() {
+    if(!this.embaucheService.add(this.cv)){
       this.toastr.info('Candidat '+this.cv?.firstname+' '+this.cv?.name+' déja embauché !', 'Embauche');
     } else {
       this.toastr.success('Candidat '+this.cv?.firstname+' '+this.cv?.name+' embauché !', 'Embauche');
-      this.embaucheService.add(this.cv);
     }
   }
 }

@@ -18,7 +18,7 @@ export class ArcdirDirective {
     'purple',
   ]
 
-  @HostListener('keyup') keyup(){
+  @HostListener('keyup') onkeyup(){
 
     this.color = this.colorTab[ Math.floor(Math.random() * 10 ) % 6 ];
     this.bd = this.colorTab[ Math.floor(Math.random() * 10 ) % 6 ];
