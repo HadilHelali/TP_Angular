@@ -1,0 +1,32 @@
+<div class="container">
+    <form #formulaire="ngForm">
+    <br/>
+    <div class="form-group">
+      <label for="InputName">Nom</label>
+      <input ngModel name="nom" #nameInput="ngModel" type="text" required class="form-control" id="InputName"  placeholder="écrire notre nom">
+    </div>
+    <br/>
+
+    <div class="form-group">
+        <label for="InputFirstname">Prénom</label>
+        <input ngModel name="prenom" #firstnameInput="ngModel" type="text" required class="form-control" id="InputFirstname" placeholder="écrire notre prénom">
+      </div>
+      <br/>
+    <div class="form-group">
+      <label for="InputAge">Age</label>
+      <input ngModel name="age"  #AgeInput="ngModel" type="number" required class="form-control" id="InputAge" placeholder="écrire votre age">
+    </div>
+    <br/>
+    <div class="form-group">
+        <label for="InputCIN">CIN</label>
+        <input ngModel name="CIN"  #CINInput="ngModel" type="number" required class="form-control" id="InputCIN" placeholder="écrire votre CIN">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="InputJob">Travail</label>
+        <input ngModel name="job"  #JobInput="ngModel" type="text" required class="form-control" id="InputJob" placeholder="écrire votre travail">
+      </div>
+      <br/>
+    <button type="submit" class="btn btn-primary" [disabled]="formulaire.invalid" (click) = "onSubmit(formulaire)">Envoyer</button>
+  </form></div>
+

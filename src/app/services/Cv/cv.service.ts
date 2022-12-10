@@ -20,4 +20,20 @@ export class CvService {
   getListCvs() : Cv[] {
     return this.listeCVs;
   }
+
+  findById(id: any) : Cv {
+      return this.listeCVs.filter(Cv => Cv.id == id)[0]
+  }
+
+  deleteCv(cv : Cv) : boolean {
+    var index = this.listeCVs.indexOf(cv)
+    this.listeCVs.splice(index, 1)
+    return true
+  }
+
+  addCv(nom : string , prenom : string , age : number,job: string , CIN:number) : Cv {
+    var cv = new Cv(nom , prenom , age,CIN,job,"" )
+    this.listeCVs.push(cv)
+    return cv
+  }
 }

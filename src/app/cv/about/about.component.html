@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div class="card" *ngIf="cv">
+    <div class="front">
+      <div class="cover">
+        <img src="assets/images/rotating_card_thumb.jpg" alt="this image doesn't work "/>
+      </div>
+      <!--image-->
+      <div class="user">
+        <img class="img-circle" src="assets/images/{{cv.path | defaultImage }}"/>
+      </div>
+      <div class="content">
+        <div class="main">
+          <!-- nom prénom  -->
+          <h3 class="name"
+              appChangeColor>{{cv.name}} {{cv.firstname}}</h3>
+          <!--profession-->
+          <p appChangeColor class="profession">{{cv.job}}</p>
+          <!-- cin -->
+          <p appChangeColor
+             class="text-center">{{cv.CIN}}</p>
+        </div>
+        <div style="text-align: center;">
+        <button type="button" class="btn btn-danger" (click)="onDelete(cv)">
+          Supprimer
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

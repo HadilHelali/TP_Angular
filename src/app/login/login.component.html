@@ -1,0 +1,26 @@
+<div class="container">
+    <form #formulaire="ngForm">
+    <br/>
+    <div class="form-group">
+      <label for="InputEmail">Adresse email</label>
+      <input ngModel name="email" #emailInput="ngModel" type="email" required class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+      <div *ngIf="emailInput.invalid && emailInput.touched" class="alert alert-danger">
+        Le champ email est invalide
+      </div>
+    </div>
+   
+    <br/>
+    <div class="form-group">
+      <label for="InputPassword">Mot de passe</label>
+      <input ngModel name="password" minlength="4" #passwordInput="ngModel" type="password" required class="form-control" id="InputPassword" placeholder="Password">
+      <div *ngIf="passwordInput.errors?.['minlength']" class="alert alert-danger">
+        le mot de passe doit avoir au moins 4 caractères.
+   </div>
+   <div *ngIf="passwordInput.invalid && passwordInput.touched" class="alert alert-danger">
+    Le champ mot de passe est invalide
+  </div>
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary" [disabled]="formulaire.invalid" (click) = "onSubmit(formulaire)">Envoyer</button>
+  </form></div>
+
