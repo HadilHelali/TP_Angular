@@ -9,6 +9,7 @@ import { MiniWordComponent } from './TP2/mini-word/mini-word.component';
 import { AboutComponent } from './cv/about/about.component';
 import { LoginComponent } from './login/login.component';
 import { AjoutComponent } from './ajout/ajout.component';
+import { SuiteImgComponent } from './suite-img/suite-img.component';
 
 const routes: Routes = [
   {path : '', redirectTo: '/color',pathMatch : 'full'},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path : 'miniWord',component: MiniWordComponent},
   {path : 'details/:id',component: AboutComponent},
   {path : 'login',component: LoginComponent},
-  {path : 'addUtil',component: AjoutComponent}
+  {path : 'addUtil',component: AjoutComponent},
+  {path : 'randImg',component: SuiteImgComponent}
   /* {path : 'c1',component: C1Component},
   {path : 'c2', component: C2Component} */
 ];

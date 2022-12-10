@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class RouterSimulatorComponent implements OnInit {
 
   constructor(private router:Router) { }
-  listeRoutes=['color','cv','miniWord','login','addUtil']
+  listeRoutes=['color','cv','miniWord','login','addUtil','randImg']
   ngOnInit(): void {
   }
 
