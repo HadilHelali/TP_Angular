@@ -1,6 +1,7 @@
 import { Component, OnInit ,Input , EventEmitter ,Output} from '@angular/core';
 import { Router } from '@angular/router';
 import{Cv} from "../cv";
+import { CvService } from '../services/Cv/cv.service';
 
 @Component({
   selector: 'app-item',
@@ -11,7 +12,7 @@ export class ItemComponent implements OnInit {
 
   @Input() cv: Cv | null ;
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private cvService : CvService) {
   this.cv = null;
   }
 
@@ -30,7 +31,8 @@ export class ItemComponent implements OnInit {
   onClick(){
     this.isSelected= true;
     if(this.cv){
-      this.showDetailsI_L.emit(this.cv);
+      //this.showDetailsI_L.emit(this.cv);
+      this.cvService.selectCv(this.cv)
     }
 
   }

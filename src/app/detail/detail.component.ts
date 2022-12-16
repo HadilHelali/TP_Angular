@@ -2,6 +2,7 @@ import { Component, OnInit ,Input } from '@angular/core';
 import {Cv} from "../cv";
 import {EmbaucheService} from "../services/embauche/embauche.service";
 import { ToastrService } from 'ngx-toastr';
+import { CvService } from '../services/Cv/cv.service';
 
 
 
@@ -15,13 +16,13 @@ export class DetailComponent implements OnInit {
 
   @Input() cv: Cv | null ;
 
-  constructor(private embaucheService: EmbaucheService,private toastr: ToastrService) {
+  constructor(private embaucheService: EmbaucheService,private toastr: ToastrService,private cvService:CvService) {
     this.cv = null;
   }
 
 
   ngOnInit(): void {
-
+    this.cvService.selectCvSubject.subscribe(c=>this.cv=c)
   }
 
   onClick() {
@@ -31,4 +32,6 @@ export class DetailComponent implements OnInit {
       this.toastr.success('Candidat '+this.cv?.firstname+' '+this.cv?.name+' embauché !', 'Embauche');
     }
   }
+
+  
 }

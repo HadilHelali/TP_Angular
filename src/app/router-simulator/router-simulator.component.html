@@ -1,5 +1,5 @@
-<div class="dropdown btn-outline-dark">
-        <select  (change)="onChange($event)" >
+<div>
+        <select class="form-select" (change)="onChange($event)" >
           <option *ngFor="let list of listeRoutes">
               {{list}}</option>
         </select>
